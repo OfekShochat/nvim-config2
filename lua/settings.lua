@@ -15,7 +15,16 @@ opt.fileencoding = 'utf-8'
 opt.termguicolors = true
 
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.cursorline = true
 
 opt.mouse = "a"
+
+local keymap = vim.keymap
+local bufopts = { noremap = true, silent = true, buffer = bufnr }
+keymap.set('n', ',f', vim.lsp.buf.format, bufopts)
+keymap.set('n', ',t', ":Telescope<CR>", {})
+keymap.set('', '<Up>', "<nop>", {})
+keymap.set('', '<Down>', "<nop>", {})
+keymap.set('', '<Left>', "<nop>", {})
+keymap.set('', '<Right>', "<nop>", {})

@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
 
-    use {"hrsh7th/nvim-cmp", after = "lspkind-nvim", config = [[require('config.nvim-cmp')]]}
+    use {"hrsh7th/nvim-cmp", config = [[require('config.nvim-cmp')]]}
     use {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}
     -- use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
     use {"hrsh7th/cmp-path", after = "nvim-cmp"}

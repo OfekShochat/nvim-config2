@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
     use {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',

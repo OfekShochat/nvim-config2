@@ -1,5 +1,6 @@
 require('plugins')
-require('settings')
-require('lsp')
-require('treesitter')
 require('monokai').setup { palette = require('monokai').ristretto }
+require('settings')
+require('config/lsp')
+require('config/treesitter')
+require('config/overseer')

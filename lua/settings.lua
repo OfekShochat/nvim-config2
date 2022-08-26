@@ -32,3 +32,6 @@ keymap.set('i', '<Up>', "<nop>", {})
 keymap.set('i', '<Down>', "<nop>", {})
 keymap.set('i', '<Left>', "<nop>", {})
 keymap.set('i', '<Right>', "<nop>", {})
+
+keymap.set('i', '<C-v>', '+p', {})
+keymap.set('n', '<C-v>', "+p", {})

@@ -3,12 +3,12 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
 
-    -- use {"hrsh7th/nvim-cmp", config = [[require('config.nvim-cmp')]]}
-    -- use {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}
-    -- -- use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
-    -- use {"hrsh7th/cmp-path", after = "nvim-cmp"}
-    -- use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
-    -- use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
+    use {"hrsh7th/cmp-nvim-lsp"}
+    use { "hrsh7th/nvim-cmp", after = "cmp-nvim-lsp" }
+    use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
+    use {"hrsh7th/cmp-path", after = "nvim-cmp"}
+    use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
+    use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -23,10 +23,19 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'stevearc/overseer.nvim',
+        requires = { 'stevearc/dressing.nvim' }
+    }
+
+    use 'nvim-lua/plenary.nvim'
+
+    use {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         requires = { 'nvim-lua/plenary.nvim' }
     }
+
+    use 'ahmedkhalf/project.nvim'
 
     use {
         'tanvirtin/monokai.nvim',

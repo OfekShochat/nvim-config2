@@ -1,0 +1,5 @@
+require('config_/telescope')
+require('config_/lsp')
+require('config_/treesitter')
+require('config_/project')
+require('config_/overseer')

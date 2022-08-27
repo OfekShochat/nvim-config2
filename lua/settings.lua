@@ -14,6 +14,8 @@ opt.whichwrap = "<,>,[,]h,l"
 opt.fileencoding = 'utf-8'
 opt.termguicolors = true
 
+opt.clipboard = 'unnamedplus'
+
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true

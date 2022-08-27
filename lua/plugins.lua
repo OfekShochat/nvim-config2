@@ -3,12 +3,11 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
 
-    use {"hrsh7th/cmp-nvim-lsp"}
-    use { "hrsh7th/nvim-cmp", after = "cmp-nvim-lsp" }
-    use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
-    use {"hrsh7th/cmp-path", after = "nvim-cmp"}
-    use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
-    use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-omni'
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -21,6 +20,9 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
+    -- use 'rmagatti/auto-session'
+    -- use 'rmagatti/session-lens'
 
     use {
         'stevearc/overseer.nvim',

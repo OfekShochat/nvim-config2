@@ -35,5 +35,7 @@ keymap.set('i', '<Down>', "<nop>", {})
 keymap.set('i', '<Left>', "<nop>", {})
 keymap.set('i', '<Right>', "<nop>", {})
 
-keymap.set('i', '<C-v>', '+p', {})
-keymap.set('n', '<C-v>', "+p", {})
+keymap.set('i', '<C-v>', '+p', bufopts)
+keymap.set('n', '<C-v>', "+p", bufopts)
+
+keymap.set('n', '<space>g', ':Telescope git_files<CR>', { silent = true })
